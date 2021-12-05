@@ -1,3 +1,6 @@
 .gradle
 .idea
 build
+
+# template
+/src/Day00.kt
