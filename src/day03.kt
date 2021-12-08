@@ -42,7 +42,7 @@ fun main() {
     val part1TestResult = 198
     val part2TestResult = 230
 
-    val testInput = readInput("Day${day}_test")
+    val testInput = readInput("day$day-sample")
     val part1 = part1(testInput)
     println("part 1: $part1")
     check(part1 == part1TestResult)
@@ -50,7 +50,7 @@ fun main() {
     println("part 2: $part2")
     check(part2 == part2TestResult)
 
-    val input = readInput("Day$day")
+    val input = readInput("day$day-input")
     println(part1(input))
     println(part2(input))
 }

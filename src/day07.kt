@@ -39,13 +39,13 @@ fun main() {
     val part1TestResult = 37
     val part2TestResult = 168
 
-    val part1 = part1(scanner("Day${day}_test"))
+    val part1 = part1(scanner("day$day-sample"))
     println("part 1: $part1")
     check(part1 == part1TestResult)
-    val part2 = part2(scanner("Day${day}_test"))
+    val part2 = part2(scanner("day$day-sample"))
     println("part 2: $part2")
     check(part2 == part2TestResult)
 
-    println(part1(scanner("Day$day")))
-    println(part2(scanner("Day$day")))
+    println(part1(scanner("day$day-input")))
+    println(part2(scanner("day$day-input")))
 }

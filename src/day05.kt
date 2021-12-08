@@ -56,8 +56,10 @@ fun main() {
         return count.filter { it.value > 1 }.count()
     }
 
+    val day = "05"
+
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day05_test")
+    val testInput = readInput("day$day-sample")
     val part1 = part1(testInput)
     println("part 1: $part1")
     check(part1 == 5)
@@ -65,7 +67,7 @@ fun main() {
     println("part 2: $part2")
     check(part2 == 12)
 
-    val input = readInput("Day05")
+    val input = readInput("day$day-input")
     println(part1(input))
     println(part2(input))
 }

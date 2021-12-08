@@ -18,12 +18,14 @@ fun main() {
         return count
     }
 
+    val day = "01"
+
     // test if implementation meets criteria from the description, like:
-    val testInput = readInput("Day01_test")
+    val testInput = readInput("day$day-sample")
     check(part1(testInput) == 7)
     check(part2(testInput) == 5)
 
-    val input = readInput("Day01")
+    val input = readInput("day$day-input")
     println(part1(input))
     println(part2(input))
 }
