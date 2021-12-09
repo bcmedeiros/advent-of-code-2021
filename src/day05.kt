@@ -3,6 +3,16 @@ import java.lang.Integer.min
 
 fun main() {
 
+    data class Point(
+            val x: Int,
+            val y: Int,
+    )
+
+    data class Line(
+            val p1: Point,
+            val p2: Point,
+    )
+
     fun readLines(input: List<String>) = input
             .map { l ->
                 val pairs = l.split(" -> ")
@@ -71,13 +81,3 @@ fun main() {
     println(part1(input))
     println(part2(input))
 }
-
-data class Point(
-        val x: Int,
-        val y: Int,
-)
-
-data class Line(
-        val p1: Point,
-        val p2: Point,
-)
