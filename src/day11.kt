@@ -3,18 +3,9 @@ import java.util.*
 fun main() {
 
     fun part1(scanner: Scanner): Long {
-        val map: List<MutableList<Int>> = buildList {
-            add(mutableListOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
-            repeat(10) {
-                add(
-                        mutableListOf(
-                            0,
-                                *scanner.nextLine().map { c -> c.toString().toInt() }.toTypedArray(),
-                            0,
-                        )
-                )
-            }
-            add(mutableListOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+        val map = Array(12) { Array(12) { 0 } }
+        repeat(10) {
+            scanner.nextLine().forEachIndexed { index, c -> map[it + 1][index + 1] = c.digitToInt() }
         }
 
         var totalFlashes = 0L
@@ -58,18 +49,9 @@ fun main() {
 
 
     fun part2(scanner: Scanner): Long {
-        val map: List<MutableList<Int>> = buildList {
-            add(mutableListOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
-            repeat(10) {
-                add(
-                        mutableListOf(
-                                0,
-                                *scanner.nextLine().map { c -> c.toString().toInt() }.toTypedArray(),
-                                0,
-                        )
-                )
-            }
-            add(mutableListOf(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+        val map = Array(12) { Array(12) { 0 } }
+        repeat(10) {
+            scanner.nextLine().forEachIndexed { index, c -> map[it + 1][index + 1] = c.digitToInt() }
         }
 
         repeat(100000) { step ->
